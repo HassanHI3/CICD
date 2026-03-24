@@ -1,0 +1,24 @@
+# key value pairs
+
+Name : Foo Bar
+age  : 30
+job :  Developer
+
+# Lists
+
+Groceries:
+- Item 1
+- Item 2
+- Item 3
+
+# Nested elements
+
+Car-type-colours:
+  Nissan : Blue
+  Mustang : Green
+  Ford : Yellow
+
+Address:
+  Street: 10 Downing Street
+  City: London
+  Country: United kingdom
