@@ -1,4 +1,4 @@
-name: coderco-CICD-workflow
+name: workflow
 on: [push]
 
 jobs:
