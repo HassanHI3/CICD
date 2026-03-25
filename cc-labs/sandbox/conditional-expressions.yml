@@ -1,0 +1,10 @@
+# these are conditional expressions in yaml
+
+- name : Run tests
+  run: python -m unittest discover
+  if: success()
+
+
+# these are expressions that use github context to check the branch name
+- name: branch name
+  run: echo the branch is ${{ github.ref }}

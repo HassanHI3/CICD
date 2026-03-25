@@ -1,0 +1,17 @@
+name: AWS Auth # this is the name of the github actions workflow
+on: [push , pull_request , push] # shows us what will trigger the github actions workflow to start
+
+jobs:  # job working on fresh VM
+  runs on: ubuntu-latest #shows us the image that we're working with inside this job
+  build:
+    steps:
+    - name: checkout code # grabbing the code
+      run: actions/checkout@v2
+
+    -name: use secret in script # found in github secrets , defined and referenced here
+    run: echo " the secret is ${{ secrets.AWS_ACCESS_KEY }} "
+
+    -name: use the secret as an environment variable # found in github secrets , defined and referenced here
+    run: echo " The secret is $AWS_ACCESS_KEY "
+    env:
+      AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
