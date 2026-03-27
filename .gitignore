@@ -1,0 +1,6 @@
+dist/
+package-lock.json
+package.json
+__pycache__/
+node_modules/
+custom-actions/

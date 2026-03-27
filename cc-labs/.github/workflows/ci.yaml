@@ -1,4 +1,4 @@
-name: workflow
+name: combined test
 on: [push]
 
 jobs:
