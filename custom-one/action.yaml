@@ -1,16 +1,17 @@
 ---
-  -name: custom one action workflow
+name: custom one action workflow
+description: This workflow is for testing the custom one action workflow
 
-  description: This workflow is for testing the custom one action workflow
+inputs:
+  who-to-greet:
+    description: "Who to greet"
+    required: true
+    default: "Hello"
 
-  inputs:
-        description: 'Who to greet'
-        required: true
-        default: 'Hello'
+outputs:
+  time:
+    description: "Time greeted"
 
-  outputs:
-            time: Time greeted
-
-  runs:
-      using: node20
-      main: dist/index.js #runs from dist at index
+runs:
+  using: node20
+  main: dist/index.js
