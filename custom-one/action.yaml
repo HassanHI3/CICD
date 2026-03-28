@@ -1,0 +1,15 @@
+---
+  -name: custom one action workflow
+
+  description: This workflow is for testing the custom one action workflow
+
+  on:
+  who-to-greet:
+    inputs:
+        description: 'Who to greet'
+        required: true
+        default: 'Hello'
+
+    runs:
+        using: node20
+        main: dist/index.js #runs from dist at index
