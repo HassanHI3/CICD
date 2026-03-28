@@ -1,16 +1,16 @@
-  -name: custom action workflow
+name: custom action workflow
 
-  on: [push]
+on: [push]
 
-    jobs:
-      build:
-        runs on: ubuntu-latest
+jobs:
+  build:
+    runs-on: ubuntu-latest
 
-        steps:
-          - name: checkout code
-            uses: actions/checkout@v5
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v4
 
-          - name: custom one action workflow
-            uses: ./custom-one #find the folder where the custom action is located
+      - name: custom one action workflow
+        uses: ./custom-one # find the folder where the custom action is located
         with:
-          who-to-greet: "Hassan" # this is the input for the custom action.
+          who-to-greet: "Hassan" # this is the input for the custom action
