@@ -3,17 +3,14 @@
 
   description: This workflow is for testing the custom one action workflow
 
-  on:
-  who-to-greet:
-    inputs:
+  inputs:
         description: 'Who to greet'
         required: true
         default: 'Hello'
 
-
-        outputs:
+  outputs:
             time: Time greeted
 
-    runs:
-        using: node20
-        main: dist/index.js #runs from dist at index
+  runs:
+      using: node20
+      main: dist/index.js #runs from dist at index
